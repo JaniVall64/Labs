@@ -3,6 +3,12 @@
 
 #include <iostream>
 
+struct Node
+{
+    int data;
+    struct Node* next;
+};
+
 int main()
 {
     std::cout << "Hello World!\n";
