@@ -40,6 +40,15 @@ void SortList(struct Node* start)
     }
 }
 
+void printList(struct Node* node)
+{
+    while (node != NULL)
+    {
+        printf("%d ", node->data);
+        node = node->next;
+    }
+}
+
 int main()
 {
     std::cout << "Hello World!\n";
