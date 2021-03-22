@@ -1,7 +1,7 @@
 ﻿// Lab1.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
-
 #include <iostream>
+using namespace std;
 
 struct Node
 {
@@ -51,7 +51,20 @@ void printList(struct Node* node)
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    struct Node* start = newNode(10);
+    start->next = newNode(12);
+    start->next->next = newNode(11);
+    start->next->next->next = newNode(11);
+    start->next->next->next->next = newNode(12);
+    start->next->next->next->next->next = newNode(11);
+    start->next->next->next->next->next->next = newNode(10);
+    printf("Linked list before removing duplicates ");
+    printList(start);
+    SortList(start);
+    printf("\nLinked list after removing duplicates ");
+    printList(start);
+
+    return 0;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
