@@ -9,6 +9,14 @@ struct Node
     struct Node* next;
 };
 
+struct Node* newNode(int data)
+{
+    Node* temp = new Node;
+    temp->data = data;
+    temp->next = NULL;
+    return temp;
+}
+
 int main()
 {
     std::cout << "Hello World!\n";
