@@ -1,2 +1,2 @@
 ﻿  Lab1.cpp
-C:\Users\admin\Documents\LabsUn\Lab1\Lab1.cpp(31): error C4700: использована неинициализированная локальная переменная "t"
+  Lab1.vcxproj -> C:\Users\admin\Documents\LabsUn\Lab1\Debug\Lab1.exe

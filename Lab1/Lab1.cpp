@@ -19,7 +19,8 @@ struct Node* newNode(int data)
 
 void SortList(struct Node* start)
 {
-    struct Node* ptr1, * ptr2, * t;
+    struct Node* ptr1, * ptr2;
+    int t = 0;
     ptr1 = start;
     while (ptr1 != NULL && ptr1->next != NULL)
     {
@@ -28,10 +29,10 @@ void SortList(struct Node* start)
         {
             if (ptr1->data > ptr2->next->data)
             {
-                t->data = ptr1->data;
+                t = ptr1->data;
                 ptr1->data = ptr2->next->data;
-                ptr2->next->data = ptr1->data;
-                ptr2->next = ptr2->next->next;
+                ptr2->next->data = t;
+                ptr2 = ptr2->next;
             }
             else
                 ptr2 = ptr2->next;
@@ -51,17 +52,16 @@ void printList(struct Node* node)
 
 int main()
 {
-    struct Node* start = newNode(10);
+    struct Node* start = newNode(113);
     start->next = newNode(12);
     start->next->next = newNode(11);
     start->next->next->next = newNode(11);
     start->next->next->next->next = newNode(12);
     start->next->next->next->next->next = newNode(11);
     start->next->next->next->next->next->next = newNode(10);
-    printf("Linked list before removing duplicates ");
     printList(start);
     SortList(start);
-    printf("\nLinked list after removing duplicates ");
+    printf("\n");
     printList(start);
 
     return 0;
