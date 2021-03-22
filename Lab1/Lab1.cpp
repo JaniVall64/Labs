@@ -17,6 +17,29 @@ struct Node* newNode(int data)
     return temp;
 }
 
+void SortList(struct Node* start)
+{
+    struct Node* ptr1, * ptr2, * t;
+    ptr1 = start;
+    while (ptr1 != NULL && ptr1->next != NULL)
+    {
+        ptr2 = ptr1;
+        while (ptr2->next != NULL)
+        {
+            if (ptr1->data > ptr2->next->data)
+            {
+                t->data = ptr1->data;
+                ptr1->data = ptr2->next->data;
+                ptr2->next->data = ptr1->data;
+                ptr2->next = ptr2->next->next;
+            }
+            else
+                ptr2 = ptr2->next;
+        }
+        ptr1 = ptr1->next;
+    }
+}
+
 int main()
 {
     std::cout << "Hello World!\n";
