@@ -37,6 +37,14 @@ void SortList(struct Node* start)
     }
 }
 
+void printReverse(Node* head)
+{
+    if (head == NULL)
+        return;
+    printReverse(head->next);
+    cout << head->data << " ";
+}
+
 void printList(struct Node* node)
 {
     while (node != NULL)
@@ -59,6 +67,8 @@ int main()
     SortList(start);
     printf("\n");
     printList(start);
+    printf("\n");
+    printReverse(start);
 
     return 0;
 }
