@@ -69,6 +69,5 @@ int main()
     printList(start);
     printf("\n");
     printReverse(start);
-
     return 0;
 }
